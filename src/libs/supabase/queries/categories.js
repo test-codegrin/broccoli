@@ -23,7 +23,10 @@ export const mapPublicCategory = (category) => ({
 });
 
 export const getPublicCategories = async () => {
-  const { data, error } = await getCategories();
+  const { data, error } = await supabaseAdmin
+    .from("categories")
+    .select("categories_id, category_name, created_at, updated_at, products!inner(products_id)")
+    .order("category_name");
 
   return {
     data: (data || []).map(mapPublicCategory),
