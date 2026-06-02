@@ -11,6 +11,9 @@ import {
 import { getPublicBlogById } from "@/libs/supabase/queries/blogs";
 import React from "react";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export async function generateMetadata({ params }) {
   const { data: blog } = await getPublicBlogById(params?.id);
 

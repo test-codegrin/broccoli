@@ -9,6 +9,9 @@ import {
 } from "@/libs/seo";
 import { getPublicBlogsList } from "@/libs/supabase/queries/blogs";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export async function generateMetadata({ searchParams }) {
   const hasFilters =
     Boolean(searchParams?.category) ||
