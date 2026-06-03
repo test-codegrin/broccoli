@@ -12,7 +12,7 @@ const applicationSections = [
       },
       {
         title: "Smoothies & Shakes",
-        image: "/img/applications/Beverages.webp",
+        image: "/img/applications/Smoothies.webp",
       },
       {
         title: "Bakery Items",
