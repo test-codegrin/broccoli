@@ -18,5 +18,12 @@ export async function GET() {
     );
   }
 
-  return NextResponse.json({ success: true, categories: data || [] });
+  return NextResponse.json(
+    { success: true, categories: data || [] },
+    {
+      headers: {
+        "Cache-Control": "no-store, no-cache, must-revalidate",
+      },
+    }
+  );
 }

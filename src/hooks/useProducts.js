@@ -29,7 +29,7 @@ const useProducts = (filters = {}) => {
       try {
         const response = await fetch(
           buildProductsUrl({ category, search, page, limit }),
-          { signal: controller.signal }
+          { cache: "no-store", signal: controller.signal }
         );
         const result = await response.json();
 

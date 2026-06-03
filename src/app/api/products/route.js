@@ -1,6 +1,10 @@
 import { getPublicProducts } from "@/libs/supabase/queries/products";
 import { NextResponse } from "next/server";
 
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export async function GET(request) {
   const { searchParams } = new URL(request.url);
   const page = searchParams.get("page") || 1;
@@ -37,12 +41,19 @@ export async function GET(request) {
       );
     }
 
-    return NextResponse.json({
-      success: true,
-      products: data || [],
-      pagination,
-      filters,
-    });
+    return NextResponse.json(
+      {
+        success: true,
+        products: data || [],
+        pagination,
+        filters,
+      },
+      {
+        headers: {
+          "Cache-Control": "no-store, no-cache, must-revalidate",
+        },
+      }
+    );
   } catch {
     return NextResponse.json(
       {

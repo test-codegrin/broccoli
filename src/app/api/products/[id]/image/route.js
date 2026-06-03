@@ -3,6 +3,8 @@ import { supabaseAdmin } from "@/libs/supabase/admin";
 import { NextResponse } from "next/server";
 
 export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 export async function GET(_request, { params }) {
   const { data, error } = await supabaseAdmin
@@ -12,7 +14,15 @@ export async function GET(_request, { params }) {
     .single();
 
   if (error || !data?.image_blob) {
-    return NextResponse.json({ error: "Image not found." }, { status: 404 });
+    return NextResponse.json(
+      { error: "Image not found." },
+      {
+        status: 404,
+        headers: {
+          "Cache-Control": "no-store, no-cache, must-revalidate",
+        },
+      }
+    );
   }
 
   try {
@@ -21,7 +31,7 @@ export async function GET(_request, { params }) {
     return new Response(buffer, {
       headers: {
         "Content-Type": "image/webp",
-        "Cache-Control": "public, max-age=31536000, immutable",
+        "Cache-Control": "no-store, no-cache, must-revalidate",
       },
     });
   } catch (imageError) {

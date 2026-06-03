@@ -111,7 +111,10 @@ const ProductDetailsPrimary = ({ initialProductIdOrSlug }) => {
   }, [setCurrentProduct]);
 
   const switchProduct = useCallback((targetProduct) => {
-    const nextProductPath = targetProduct?.slug || targetProduct?.id;
+    const nextProductPath =
+      targetProduct?.path?.split("/").filter(Boolean).pop() ||
+      targetProduct?.id ||
+      targetProduct?.slug;
     if (!nextProductPath || targetProduct.id === productRef.current?.id) return;
 
     if (typeof window !== "undefined") {

@@ -71,13 +71,14 @@ export const mapPublicProductCard = (product) => {
     ? product.categories[0]
     : product.categories;
   const publicCategory = mapCategory(category);
+  const nameSlug = slugify(product.product_name);
 
   return {
     id: product.products_id,
     name: product.product_name,
     title: product.product_name,
-    slug: slugify(product.product_name),
-    path: `/products/${slugify(product.product_name)}`,
+    slug: nameSlug,
+    path: `/products/${product.products_id}`,
     image: getPublicProductImageSrc(product),
     category: publicCategory,
     type: publicCategory?.name || "",
@@ -275,7 +276,8 @@ const resolvePublicProductByIdOrSlug = async (idOrSlug) => {
 
   const { data: candidates, error } = await supabaseAdmin
     .from("products")
-    .select("products_id, product_name");
+    .select("products_id, product_name, created_at")
+    .order("created_at", { ascending: false });
 
   if (error) return { productId: null, error };
 

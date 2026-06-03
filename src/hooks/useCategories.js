@@ -19,6 +19,7 @@ const useCategories = ({ enabled = true } = {}) => {
 
       try {
         const response = await fetch("/api/categories", {
+          cache: "no-store",
           signal: controller.signal,
         });
         const result = await response.json();

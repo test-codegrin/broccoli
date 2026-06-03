@@ -373,7 +373,7 @@ export const getProductSchema = (product) => {
     manufacturer: {
       "@id": `${absoluteUrl("/")}#organization`,
     },
-    url: absoluteUrl(`/products/${product.slug || product.id}`),
+    url: absoluteUrl(product.path || `/products/${product.id || product.slug}`),
     additionalProperty,
     audience: {
       "@type": "BusinessAudience",

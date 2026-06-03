@@ -11,6 +11,9 @@ import {
 import { buildProductCategoryPath } from "@/libs/catalog";
 import { getPublicProducts } from "@/libs/supabase/queries/products";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 const readSearchParam = (value) =>
   Array.isArray(value) ? value[0] : value;
 

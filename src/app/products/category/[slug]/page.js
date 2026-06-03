@@ -10,9 +10,11 @@ import {
 import {
   buildProductCategoryPath,
   getCategoryContent,
-  indexedProductCategorySlugs,
 } from "@/libs/catalog";
 import { getPublicProducts } from "@/libs/supabase/queries/products";
+
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 const buildCategoryFaqItems = (categoryLabel) => [
   {
@@ -43,10 +45,6 @@ export async function generateMetadata({ params }) {
       `${category.label} manufacturer`,
     ],
   });
-}
-
-export async function generateStaticParams() {
-  return indexedProductCategorySlugs.map((slug) => ({ slug }));
 }
 
 const ProductCategoryPage = async ({ params }) => {

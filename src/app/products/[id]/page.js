@@ -11,6 +11,9 @@ import { buildProductCategoryPath } from "@/libs/catalog";
 import { buildProductDetailFaqItems } from "@/libs/seoContent";
 import { getPublicProductBySlug } from "@/libs/supabase/queries/products";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export async function generateMetadata({ params }) {
   const productIdOrSlug = params?.id;
   const { data: product } = await getPublicProductBySlug(productIdOrSlug);
@@ -36,7 +39,7 @@ export async function generateMetadata({ params }) {
   return buildSeoMetadata({
     title: `${productTitle} Exporter & Supplier`,
     description,
-    path: `/products/${product.slug || product.id}`,
+    path: product.path || `/products/${product.id || product.slug || productIdOrSlug}`,
     images: product.images?.length ? product.images : product.image,
     keywords: [
       productTitle,
@@ -52,7 +55,7 @@ const ProductDetails = async ({ params }) => {
   const { data: product } = await getPublicProductBySlug(productParam);
   const productTitle = product?.title || product?.product_name || "Product";
   const categoryName = product?.type || product?.category?.name || "Products";
-  const productPath = `/products/${product?.slug || product?.id || productParam}`;
+  const productPath = product?.path || `/products/${product?.id || product?.slug || productParam}`;
   const categoryPath = buildProductCategoryPath(categoryName);
   const faqItems = buildProductDetailFaqItems(productTitle, categoryName);
 

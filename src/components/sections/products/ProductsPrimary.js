@@ -20,7 +20,7 @@ const powderNoteCategories = new Set([
 ]);
 
 const getProductKey = (product, fallback) =>
-  product?.slug || product?.path || `${product?.type || "product"}-${product?.id || fallback}`;
+  product?.path || product?.id || product?.slug || `${product?.type || "product"}-${fallback}`;
 const skeletonItems = Array.from({ length: 8 }, (_, index) => index);
 
 const ProductsPrimary = ({ isSidebar }) => {
