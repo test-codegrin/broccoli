@@ -104,7 +104,7 @@ const BlogDetailsPrimary = () => {
             </div>
           </div>
           <div style={{ position: "relative", overflow: "hidden", aspectRatio: "4/3" }}>
-            <Image src={coverSrc} alt={blogTitle} fill style={{ objectFit: "cover" }} />
+            <Image src={coverSrc} alt={blogTitle} fill sizes="(max-width: 768px) 100vw, 600px" style={{ objectFit: "cover" }} />
           </div>
         </div>
       </div>

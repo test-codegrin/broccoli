@@ -212,7 +212,7 @@ const ApplicationPrimary = () => {
                     src={image}
                     alt={itemTitle}
                     fill
-                    sizes="(max-width: 575px) 100vw, (max-width: 991px) 50vw, 20vw"
+                    sizes="(max-width: 479px) calc(100vw - 30px), (max-width: 767px) calc((100vw - 52px) / 2), (max-width: 991px) calc((100vw - 100px) / 3), (max-width: 1199px) calc((100vw - 150px) / 4), (max-width: 1399px) calc((100vw - 184px) / 5), (max-width: 1720px) calc((100vw - 264px) / 5), 301px"
                     className="application-card__image"
                     style={{ objectPosition: imagePosition || "center" }}
                   />
@@ -230,4 +230,3 @@ const ApplicationPrimary = () => {
 };
 
 export default ApplicationPrimary;
-
