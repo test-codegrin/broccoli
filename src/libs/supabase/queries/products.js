@@ -65,7 +65,7 @@ export const mapProductRecord = (product) => {
   return {
     ...product,
     id: product.products_id,
-    slug: product.products_id,
+    slug: slugify(product.product_name) || product.products_id,
     title: product.product_name,
     desc: product.product_description,
     description: product.product_description,
@@ -89,13 +89,13 @@ export const mapPublicProductCard = (product) => {
     name: product.product_name,
     title: product.product_name,
     slug: nameSlug,
-    path: `/products/${product.products_id}`,
+    path: `/products/${nameSlug || product.products_id}`,
     image: getPublicProductImageSrc(product),
     category: publicCategory,
     type: publicCategory?.name || "",
   };
 };
-
+ 
 export const mapPublicProductDetail = (product) => {
   const card = mapPublicProductCard(product);
   const description = product.product_description || "";

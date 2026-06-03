@@ -5,6 +5,7 @@ import {
 import { getPublicBlogsForSitemap } from "@/libs/supabase/queries/blogs";
 import { getPublicCategories } from "@/libs/supabase/queries/categories";
 import { getSiteUrl } from "@/libs/seo";
+import { slugify } from "@/libs/supabase/queries/products";
 import { supabaseAdmin } from "@/libs/supabase/admin";
 
 const staticRoutes = [
@@ -60,7 +61,7 @@ export default async function sitemap() {
   }));
 
   const productEntries = (productsResult.data || []).map((product) => ({
-    url: `${siteUrl}/products/${product.products_id}`,
+    url: `${siteUrl}/products/${slugify(product.product_name) || product.products_id}`,
     lastModified: product.updated_at || product.created_at || new Date(),
     changeFrequency: "weekly",
     priority: 0.8,
