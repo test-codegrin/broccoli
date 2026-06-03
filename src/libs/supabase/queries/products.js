@@ -25,8 +25,19 @@ const toPositiveInt = (value, fallback) => {
   return Number.isFinite(parsed) && parsed > 0 ? parsed : fallback;
 };
 
+const isStaticProductImageSrc = (value) =>
+  typeof value === "string" && /^\/?img\/product(\/|$)/i.test(value.trim());
+
+const getDatabaseProductImageUrl = (product) => {
+  const imageUrl = product?.product_image_url;
+  if (!imageUrl || isStaticProductImageSrc(imageUrl)) return null;
+  return imageUrl;
+};
+
 const getPublicProductImageSrc = (product) =>
-  product?.image_name ? `/api/products/${product.products_id}/image` : null;
+  product?.image_name
+    ? `/api/products/${product.products_id}/image`
+    : getDatabaseProductImageUrl(product);
 
 const mapCategory = (category) =>
   category
@@ -42,7 +53,7 @@ export const getProductImageSrc = (product) => {
     return `/api/products/${product.products_id}/image`;
   }
 
-  return product?.product_image_url || null;
+  return getDatabaseProductImageUrl(product);
 };
 
 export const mapProductRecord = (product) => {
@@ -204,6 +215,7 @@ export const getPublicProducts = async ({
           categories_id,
           product_name,
           product_description,
+          product_image_url,
           image_name,
           created_at,
           updated_at,
@@ -253,6 +265,7 @@ export const getPublicProductBySlug = async (slug) => {
         product_description,
         product_specification,
         product_application,
+        product_image_url,
         image_name,
         created_at,
         updated_at,
@@ -324,6 +337,7 @@ export const getPublicRelatedProductsBySlug = async (idOrSlug, { limit = 6 } = {
         product_description,
         product_specification,
         product_application,
+        product_image_url,
         image_name,
         created_at,
         updated_at,

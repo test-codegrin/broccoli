@@ -1,5 +1,3 @@
-const productImage1 = "/img/product/1.webp";
-
 const getAllFeatues = () => {
   const features = [
     {
@@ -18,7 +16,7 @@ const getAllFeatues = () => {
       path: "/team",
       desc: "Experienced sourcing and processing teams support every product category.",
       bg: "secondary",
-      bgImg: productImage1,
+      bgImg: null,
     },
     {
       id: 3,
