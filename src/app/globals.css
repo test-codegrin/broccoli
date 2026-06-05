@@ -17081,6 +17081,48 @@ blockquote::before {
   margin-bottom: 0;
 }
 
+.footer-attribution {
+  margin: 16px 0 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--ltn__color-2);
+  opacity: 1;
+  text-align: center;
+  width: 100%;
+}
+
+.footer-attribution a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: opacity 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.footer-attribution a:hover,
+.footer-attribution a:focus {
+  opacity: 1;
+  border-bottom-color: currentColor;
+}
+
+.section-bg-1 .footer-attribution a {
+  color: var(--ltn__secondary-color);
+}
+
+.section-bg-1 .footer-attribution a:hover,
+.section-bg-1 .footer-attribution a:focus {
+  color: var(--ltn__secondary-color);
+}
+
+.section-bg-2 .footer-attribution a {
+  color: #5a87f1;
+}
+/* 
+.section-bg-2 .footer-attribution a:hover,
+.section-bg-2 .footer-attribution a:focus {
+  color: var(--ltn__color-2);
+} */
+
 .ltn__copyright-menu ul {
   margin: 0;
   padding: 0;
@@ -17122,6 +17164,9 @@ blockquote::before {
   }
   .ltn__copyright-area .ltn__copyright-menu {
     text-align: center !important;
+  }
+  .footer-attribution {
+    margin-top: 12px;
   }
   #scrollUp {
     font-size: 16px;

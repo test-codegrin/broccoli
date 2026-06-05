@@ -6,9 +6,8 @@ const Copyright2 = () => {
   const { footerBg } = useFooterContex();
   return (
     <div
-      className={`ltn__copyright-area ltn__copyright-2 ${
-        footerBg === "light" ? "section-bg-1 border-top" : "section-bg-2"
-      } ${footerBg === "dark" ? "ltn__border-top-2" : ""}  plr--5 `}
+      className={`ltn__copyright-area ltn__copyright-2 ${footerBg === "light" ? "section-bg-1 border-top" : "section-bg-2"
+        } ${footerBg === "dark" ? "ltn__border-top-2" : ""}  plr--5 `}
     >
       <div className="container-fluid ">
         <div className="row">
@@ -34,6 +33,21 @@ const Copyright2 = () => {
                 </li>
               </ul>
             </div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-12">
+            <p className="footer-attribution">
+              Developed and maintained by{" "}
+              <Link
+                className="text-black"
+                href="https://codegrin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Codegrin Technologies
+              </Link>
+            </p>
           </div>
         </div>
       </div>
