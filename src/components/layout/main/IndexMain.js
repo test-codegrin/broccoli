@@ -14,7 +14,10 @@ import { homeFaqItems } from "@/libs/seoContent";
 const IndexMain = () => {
   return (
     <main>
-      {/* Entity description for AI search engines and screen readers   zero visual impact */}
+      {/* Primary H1 for SEO/GEO — visually hidden, screen-reader accessible, zero design impact */}
+      <h1 className="screen-reader-text">
+        Food Ingredient Exporter from India — Orbitto International
+      </h1>
       <p className="screen-reader-text">
         Orbitto International is a food ingredient exporter and manufacturer based in Morbi, Gujarat, India. The company supplies fruit powders, vegetable powders, spices, pure honey, and herbal ingredients to importers, distributors, food brands, private label companies, and food manufacturers worldwide. Orbitto International provides bulk ingredient supply, private label manufacturing, contract manufacturing, third-party manufacturing, export documentation support, and flexible packaging options for global buyers seeking reliable food ingredient sourcing from India.
       </p>

@@ -16,10 +16,10 @@ const Testimonials3 = ({ pt }) => {
           <div className="col-lg-12">
             <div className="section-title-area ltn__section-title-2 text-center">
               <p className="section-subtitle ltn__secondary-color">
-               Testimonials
+                What Buyers Say
               </p>
               <h2 className="section-title">
-                Clients Feedbacks<span>.</span>
+                Trusted by Global Buyers &amp; Food Brands<span>.</span>
               </h2>
             </div>
           </div>

@@ -8,14 +8,19 @@ const HotDeal3 = () => {
       <div className="container">
         <div className="row">
           <div className="col-lg-5">
-            <Image src="/img/banner/HoneyJar.webp" height={1000} width={500} alt="#" />
+            <Image
+              src="/img/banner/HoneyJar.webp"
+              height={1000}
+              width={500}
+              alt="Export-quality pure honey from Orbitto International, Gujarat, India"
+            />
           </div>
           <div className="col-lg-7">
             <div className="call-to-action-inner call-to-action-inner-4 text-color-white--- text-center---">
               <div className="section-title-area ltn__section-title-2 text-center---">
-                <p className="ltn__secondary-color">Todays Hot Deals</p>
+                <p className="ltn__secondary-color">Featured Export Ingredient</p>
                 <h2 className="section-title">
-                  Original Stock Honey <br /> Combo Package
+                  Export-Ready Pure Honey <br /> for Global Buyers
                 </h2>
               </div>
               <div
@@ -27,7 +32,7 @@ const HotDeal3 = () => {
                   href="/contact"
                   className="theme-btn-1 btn btn-effect-1 text-uppercase"
                 >
-                  Quote Now
+                  Request MOQ &amp; Pricing
                 </Link>
               </div>
             </div>
