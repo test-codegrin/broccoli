@@ -4,6 +4,7 @@ import PageWrapper from "@/components/shared/wrappers/PageWrapper";
 import {
   buildSeoMetadata,
   getBreadcrumbSchema,
+  getFAQPageSchema,
   getProductSchema,
   truncateText,
 } from "@/libs/seo";
@@ -37,15 +38,19 @@ export async function generateMetadata({ params }) {
   );
 
   return buildSeoMetadata({
-    title: `${productTitle} Exporter & Supplier`,
+    title: `${productTitle} — Exporter & Bulk Supplier from India`,
     description,
     path: product.path || `/products/${product.id || product.slug || productIdOrSlug}`,
     images: product.images?.length ? product.images : product.image,
     keywords: [
       productTitle,
-      `${productTitle} exporter`,
-      `${productTitle} supplier`,
+      `${productTitle} exporter India`,
+      `${productTitle} supplier India`,
+      `${productTitle} manufacturer Gujarat`,
+      `bulk ${productTitle.toLowerCase()} supplier`,
+      `${productTitle} private label India`,
       categoryName,
+      `${categoryName} exporter India`,
     ],
   });
 }
@@ -66,6 +71,10 @@ const ProductDetails = async ({ params }) => {
         data={getProductSchema(product)}
       />
       <StructuredData
+        id="product-detail-faq-schema"
+        data={getFAQPageSchema(faqItems)}
+      />
+      <StructuredData
         id="product-detail-breadcrumb-schema"
         data={getBreadcrumbSchema([
           { name: "Home", path: "/" },
@@ -74,6 +83,9 @@ const ProductDetails = async ({ params }) => {
           { name: productTitle, path: productPath },
         ])}
       />
+      <p className="screen-reader-text">
+        {`${productTitle} is an export-quality ${categoryName.toLowerCase()} ingredient supplied by Orbitto International from Morbi, Gujarat, India. Available for bulk supply, private label manufacturing, and international export to buyers, importers, distributors, and food brands worldwide.`}
+      </p>
       <PageWrapper
         isNotHeaderTop={true}
         isHeaderRight={true}

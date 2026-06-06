@@ -472,6 +472,22 @@ export const getLocalBusinessSchema = () => ({
   ].filter(Boolean),
 });
 
+export const getHowToSchema = ({ name, description, steps = [] }) => ({
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name,
+  description,
+  step: steps.map((step, index) => ({
+    "@type": "HowToStep",
+    position: index + 1,
+    name: step.name,
+    text: step.text,
+  })),
+  supplier: {
+    "@id": `${absoluteUrl("/")}#organization`,
+  },
+});
+
 export const getProductFAQSchema = (productName = "Product") => ({
   "@context": "https://schema.org",
   "@type": "FAQPage",

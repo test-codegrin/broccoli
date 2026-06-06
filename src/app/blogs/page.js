@@ -19,15 +19,19 @@ export async function generateMetadata({ searchParams }) {
     Boolean(searchParams?.author_role);
 
   return buildSeoMetadata({
-    title: "F&B Insights and Export Blog",
+    title: "Food Ingredient Insights — Export, Applications & Sourcing Blog",
     description:
-      "Read Orbitto International articles on food ingredient trends, export-ready powders, applications, sourcing insights, and product innovation for global buyers.",
+      "Read Orbitto International articles on food ingredient trends, export-ready powders, sourcing insights, application guides, and product innovation for importers, food brands, and global buyers.",
     path: "/blogs",
     keywords: [
-      "food ingredient blog",
-      "export insights",
-      "fruit powder applications",
-      "ingredient trends",
+      "food ingredient blog India",
+      "food ingredient export insights",
+      "fruit powder application guide",
+      "vegetable powder uses food manufacturing",
+      "herbal powder nutraceutical blog",
+      "food ingredient sourcing India",
+      "food export trends India",
+      "food ingredient supplier blog",
     ],
     noIndex: hasFilters,
   });

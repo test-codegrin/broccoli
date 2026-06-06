@@ -5,6 +5,7 @@ import {
   buildSeoMetadata,
   getBreadcrumbSchema,
   getCollectionPageSchema,
+  getFAQPageSchema,
   getItemListSchema,
   humanizeSlug,
 } from "@/libs/seo";
@@ -68,37 +69,53 @@ const getProductsSeo = (searchParams = {}) => {
   }
 
   return {
-    title: "Export Products",
+    title: "Food Ingredient Products — Fruit Powder, Vegetable Powder, Spices, Honey & Herbal",
     description:
-      "Browse Orbitto International products including fruit powders, vegetable powders, spices, honey, and herbal ingredients for global food and beverage applications.",
+      "Browse Orbitto International's full export ingredient catalog: fruit powders, vegetable powders, spices, honey, and herbal powders from Gujarat, India for bulk supply, private label, and global food manufacturing.",
     canonicalPath: "/products",
     schemaPath: "/products",
     noIndex: false,
     keywords: [
-      "export products",
-      "bulk food ingredients",
-      "fruit powder catalog",
-      "vegetable powder catalog",
+      "food ingredient products India",
+      "fruit powder products export",
+      "vegetable powder products India",
+      "spice products exporter India",
+      "honey products exporter India",
+      "herbal powder products India",
+      "bulk food ingredient catalog India",
+      "food ingredient supplier product list",
+      "export ingredient catalog Gujarat",
+      "private label food ingredient products",
     ],
-    schemaName: "Orbitto Product Catalog",
+    schemaName: "Orbitto International Export Product Catalog",
   };
 };
 
 const productsFaqItems = [
   {
-    question: "What product categories does Orbitto International export?",
+    question: "What food ingredient products does Orbitto International export from India?",
     answer:
-      "Orbitto International focuses on export-oriented fruit powders, vegetable powders, spices, honey, herbal powders, and related food ingredient solutions for global buyers and brands.",
+      "Orbitto International exports five main ingredient categories from Gujarat, India: fruit powders, vegetable powders, pure honey, spices, and herbal powders. All categories are available for bulk supply, private label manufacturing, and contract manufacturing arrangements.",
   },
   {
-    question: "Can buyers request bulk supply, private label, or contract manufacturing support?",
+    question: "Can buyers request bulk supply, private label, or contract manufacturing?",
     answer:
-      "Yes. Orbitto International supports bulk ingredient supply and can discuss private label or contract manufacturing requirements based on the product category and order scope.",
+      "Yes. Orbitto International supports bulk ingredient supply and can discuss private label manufacturing, contract manufacturing, and third-party manufacturing requirements based on product category and buyer order scope.",
   },
   {
-    question: "Can I request specifications, MOQ, pricing, or samples before ordering?",
+    question: "Can I request product specifications, MOQ, pricing, or samples?",
     answer:
-      "Yes. Buyers can contact Orbitto International for product specifications, application details, MOQ information, export pricing discussions, and sample-related enquiries.",
+      "Yes. Buyers can contact Orbitto International for product specifications, application suitability, MOQ information, export pricing discussions, and sample-related enquiries before placing an order.",
+  },
+  {
+    question: "Are Orbitto International ingredients suitable for nutraceuticals and functional foods?",
+    answer:
+      "Yes. Orbitto International fruit powders, vegetable powders, and herbal powders are used in nutraceuticals, functional beverages, health supplements, and wellness product formulations by brands globally.",
+  },
+  {
+    question: "Can international buyers from any country source ingredients from Orbitto?",
+    answer:
+      "Yes. Orbitto International exports food ingredients worldwide. The company provides export documentation, logistics coordination, and buyer support for importers and food brands in any country.",
   },
 ];
 
@@ -138,17 +155,23 @@ const Products = async ({ searchParams }) => {
         ])}
       />
       {!seo.noIndex ? (
-        <StructuredData
-          id="products-item-list-schema"
-          data={getItemListSchema({
-            title: "Orbitto Product Catalog Items",
-            path: "/products",
-            items: (productList || []).map((product) => ({
-              name: product.title || product.name,
-              path: product.path || `/products/${product.slug || product.id}`,
-            })),
-          })}
-        />
+        <>
+          <StructuredData
+            id="products-item-list-schema"
+            data={getItemListSchema({
+              title: "Orbitto International Export Product Catalog",
+              path: "/products",
+              items: (productList || []).map((product) => ({
+                name: product.title || product.name,
+                path: product.path || `/products/${product.slug || product.id}`,
+              })),
+            })}
+          />
+          <StructuredData
+            id="products-faq-schema"
+            data={getFAQPageSchema(productsFaqItems)}
+          />
+        </>
       ) : null}
       <PageWrapper
         isNotHeaderTop={true}

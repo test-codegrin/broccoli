@@ -14,37 +14,103 @@ const productCategoryContent = {
   "fruit-powder": {
     label: "Fruit Powder",
     description:
-      "Explore export-ready fruit powders from Orbitto International for beverages, bakery, nutraceuticals, private label requirements, and bulk ingredient sourcing.",
+      "Export-quality fruit powders from Orbitto International, Gujarat, India. Spray-dried and dehydrated fruit powders for beverages, bakery, nutraceuticals, private label brands, and bulk ingredient sourcing worldwide.",
+    keywords: [
+      "fruit powder exporter India",
+      "fruit powder supplier India",
+      "spray dried fruit powder exporter",
+      "fruit powder manufacturer Gujarat",
+      "bulk fruit powder supplier India",
+      "fruit powder for beverage manufacturing",
+      "fruit powder private label India",
+      "dehydrated fruit powder exporter",
+    ],
+    entityText:
+      "Orbitto International exports spray-dried and dehydrated fruit powders from Morbi, Gujarat, India for global importers, food brands, and distributors. Available in bulk supply, private label, and contract manufacturing arrangements.",
   },
   "vegetable-powder": {
     label: "Vegetable Powder",
     description:
-      "Browse vegetable powders from Orbitto International for soups, seasonings, ready meals, health foods, and industrial food manufacturing.",
+      "Export-grade vegetable powders from Orbitto International, Gujarat, India. Dehydrated vegetable powders for soups, seasonings, ready meals, health foods, and industrial food manufacturing globally.",
+    keywords: [
+      "vegetable powder exporter India",
+      "vegetable powder supplier India",
+      "dehydrated vegetable powder exporter",
+      "vegetable powder manufacturer Gujarat",
+      "bulk vegetable powder India",
+      "vegetable powder for food manufacturing",
+      "vegetable powder private label India",
+      "freeze dried vegetable powder India",
+    ],
+    entityText:
+      "Orbitto International exports dehydrated and spray-dried vegetable powders from Morbi, Gujarat, India for importers, food manufacturers, and private label brands worldwide.",
   },
   honey: {
     label: "Honey",
     description:
-      "Find export-quality honey from Orbitto International for food brands, retail packing, private label projects, and global distribution.",
+      "Export-quality pure honey from Orbitto International, Gujarat, India. Natural honey for food brands, retail packing, private label projects, and wholesale distribution globally.",
+    keywords: [
+      "honey exporter India",
+      "pure honey supplier India",
+      "raw honey exporter Gujarat",
+      "bulk honey supplier India",
+      "natural honey exporter India",
+      "honey private label India",
+      "honey for food brands India",
+      "wholesale honey exporter India",
+    ],
+    entityText:
+      "Orbitto International exports pure natural honey from Gujarat, India for global food brands, importers, private label companies, and wholesale distributors.",
   },
   spices: {
     label: "Spices",
     description:
-      "Discover premium spices from Orbitto International for seasoning blends, sauces, ready meals, foodservice supply, and wholesale export.",
+      "Premium export spices from Orbitto International, Gujarat, India. Whole and ground spices for seasoning blends, sauces, ready meals, foodservice supply, and wholesale export worldwide.",
+    keywords: [
+      "spice exporter India",
+      "spice supplier Gujarat India",
+      "Indian spice exporter",
+      "bulk spice supplier India",
+      "spice manufacturer Gujarat",
+      "wholesale spice exporter India",
+      "spice for food manufacturing India",
+      "premium spice exporter India",
+    ],
+    entityText:
+      "Orbitto International exports premium Indian spices from Gujarat, India for global importers, food manufacturers, seasoning blend producers, and private label brands.",
   },
   "herbal-powder": {
     label: "Herbal Powder",
     description:
-      "Source herbal powders from Orbitto International for wellness products, nutraceuticals, functional beverages, and international ingredient supply.",
+      "Export-quality herbal powders from Orbitto International, Gujarat, India. Cold-processed herbal powders for wellness products, nutraceuticals, functional beverages, and international ingredient supply.",
+    keywords: [
+      "herbal powder exporter India",
+      "herbal powder supplier India",
+      "herbal powder manufacturer Gujarat",
+      "bulk herbal powder India",
+      "herbal powder for nutraceuticals India",
+      "ayurvedic herbal powder exporter",
+      "herbal powder private label India",
+      "wellness ingredient supplier India",
+    ],
+    entityText:
+      "Orbitto International exports cold-processed herbal powders from Gujarat, India for nutraceutical brands, wellness companies, and private label ingredient buyers worldwide.",
   },
   fruit: {
     label: "Fruit",
     description:
-      "Browse fruit ingredients from Orbitto International for export-oriented food, beverage, and industrial ingredient requirements.",
+      "Fresh and processed fruit ingredients from Orbitto International for export-oriented food, beverage, and industrial ingredient requirements globally.",
+    keywords: ["fruit ingredient exporter India", "fruit supplier India"],
+    entityText:
+      "Orbitto International supplies fruit ingredients from Gujarat, India for global food and beverage buyers.",
   },
   vegetable: {
     label: "Vegetable",
     description:
-      "Browse vegetable ingredients from Orbitto International for export-oriented food manufacturing, health-focused products, and wholesale supply.",
+      "Vegetable ingredients from Orbitto International for export-oriented food manufacturing, health-focused products, and wholesale supply globally.",
+    keywords: ["vegetable ingredient exporter India", "vegetable supplier India"],
+    entityText:
+      "Orbitto International supplies vegetable ingredients from Gujarat, India for global food manufacturers and health product brands.",
   },
 };
 
@@ -64,6 +130,8 @@ export const getCategoryContent = (categorySlug = "") => {
   if (presetContent) {
     return {
       slug: normalizedSlug,
+      keywords: [],
+      entityText: `Orbitto International exports ${fallbackLabel.toLowerCase()} ingredients from Gujarat, India for global buyers.`,
       ...presetContent,
     };
   }
@@ -72,6 +140,8 @@ export const getCategoryContent = (categorySlug = "") => {
     slug: normalizedSlug,
     label: fallbackLabel || "Product Category",
     description: `Explore ${fallbackLabel.toLowerCase()} from Orbitto International for export-focused sourcing, bulk supply, and private label ingredient needs.`,
+    keywords: [`${fallbackLabel.toLowerCase()} exporter India`, `${fallbackLabel.toLowerCase()} supplier India`],
+    entityText: `Orbitto International exports ${fallbackLabel.toLowerCase()} from Gujarat, India for global buyers, importers, and food brands.`,
   };
 };
 

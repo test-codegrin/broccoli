@@ -88,17 +88,42 @@ export const contactFaqItems = [
   {
     question: "How can I request a quote from Orbitto International?",
     answer:
-      "You can submit a quote request through the contact form with your service type, selected products, and message, or contact the team directly by phone or email.",
+      "Submit a quote request through the Orbitto International contact form with your product interest, service type, and requirements. The team responds with pricing guidance, MOQ details, and next steps for commercial discussions.",
   },
   {
     question: "Can I enquire about MOQ, price, private labeling, or packaging?",
     answer:
-      "Yes. The contact page is set up for MOQ, price, product details, private labeling, packaging type, bulk supply, and sample-related enquiries.",
+      "Yes. The Orbitto International contact page is set up for MOQ, pricing, product specifications, private label manufacturing, packaging preferences, bulk supply discussions, and sample-related enquiries from global buyers.",
   },
   {
-    question: "Can Orbitto International support export-related documentation and shipment coordination?",
+    question: "Can Orbitto International support export documentation and shipment coordination?",
     answer:
-      "Yes. Orbitto International positions its service around export-ready coordination, including documentation and logistics support based on buyer requirements.",
+      "Yes. Orbitto International provides export documentation support, customs clearance coordination, and logistics guidance for importers, distributors, and food brands shipping ingredients internationally.",
+  },
+  {
+    question: "How do I request a product sample from Orbitto International?",
+    answer:
+      "Contact Orbitto International via the contact form or email at orbittointernational@gmail.com. Specify the product category, intended application, and destination country. The team will respond with sample availability and next steps.",
+  },
+  {
+    question: "Can international buyers from any country contact Orbitto International?",
+    answer:
+      "Yes. Orbitto International works with importers, distributors, food brands, and manufacturers globally. The company exports food ingredients worldwide and can respond to enquiries from any country.",
+  },
+  {
+    question: "How long does it take to receive a response from Orbitto International?",
+    answer:
+      "Orbitto International aims to respond to commercial enquiries within 1–2 business days. For urgent export enquiries, buyers can also reach the team directly by phone at +91 99047 27348.",
+  },
+  {
+    question: "What information should I include when contacting Orbitto International?",
+    answer:
+      "Include the product name or category, your intended application, destination country, approximate quantity or MOQ requirement, and whether you need bulk supply, private label, or contract manufacturing. This helps the team respond with relevant details faster.",
+  },
+  {
+    question: "Can I discuss custom formulations or new product categories with Orbitto?",
+    answer:
+      "Yes. Orbitto International can discuss custom formulations, new ingredient categories, private label product development, and contract manufacturing scope through the contact or enquiry process.",
   },
 ];
 
@@ -137,15 +162,27 @@ export const applicationFaqItems = [
 
 export const buildProductDetailFaqItems = (productTitle, categoryName) => [
   {
+    question: `What is ${productTitle} used for in food manufacturing?`,
+    answer: `${productTitle} from Orbitto International is used in food and beverage manufacturing including beverages, bakery, confectionery, dairy, nutraceuticals, ready meals, and private label product development. Buyers can request application details for specific end-use categories.`,
+  },
+  {
     question: `Can I request bulk pricing or MOQ for ${productTitle}?`,
-    answer: `Yes. Buyers can contact Orbitto International to discuss MOQ, bulk pricing, export requirements, and commercial supply planning for ${productTitle}.`,
+    answer: `Yes. Buyers can contact Orbitto International to discuss MOQ, bulk pricing, export requirements, packaging options, and commercial supply planning for ${productTitle}.`,
   },
   {
-    question: `Does Orbitto International provide specification support for ${productTitle}?`,
-    answer: `Yes. Orbitto International can discuss specifications, applications, packaging preferences, and product details for ${productTitle}.`,
+    question: `Does Orbitto International export ${productTitle} internationally?`,
+    answer: `Yes. ${productTitle} is part of Orbitto International's export-focused ${categoryName.toLowerCase()} range, available for international buyers, importers, distributors, and food brands worldwide from Gujarat, India.`,
   },
   {
-    question: `Is ${productTitle} suitable for international sourcing in the ${categoryName.toLowerCase()} category?`,
-    answer: `Yes. ${productTitle} is presented as part of Orbitto International's export-focused ${categoryName.toLowerCase()} offering for buyers, distributors, and brands.`,
+    question: `Can I get ${productTitle} under a private label?`,
+    answer: `Yes. Orbitto International supports private label manufacturing and contract manufacturing for ${productTitle}. Buyers can discuss custom packaging, formulations, and branding requirements through the enquiry process.`,
+  },
+  {
+    question: `How do I request specifications or a sample of ${productTitle}?`,
+    answer: `Contact Orbitto International via the contact page or at orbittointernational@gmail.com with your product interest, application details, and destination. The team will respond with specifications, sample availability, and commercial next steps for ${productTitle}.`,
+  },
+  {
+    question: `What certifications or quality standards apply to ${productTitle}?`,
+    answer: `${productTitle} from Orbitto International is processed to export-grade quality standards from our Gujarat, India facility. Buyers can request batch documentation, product specifications, and quality details during the commercial discussion process.`,
   },
 ];

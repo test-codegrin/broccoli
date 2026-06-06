@@ -5,6 +5,7 @@ import {
   buildSeoMetadata,
   getBreadcrumbSchema,
   getBlogPostingSchema,
+  getWebPageSchema,
   stripHtml,
   truncateText,
 } from "@/libs/seo";
@@ -33,15 +34,17 @@ export async function generateMetadata({ params }) {
   );
 
   return buildSeoMetadata({
-    title: `${blog.title} | ${blog.category}`,
+    title: `${blog.title} | Orbitto International`,
     description,
     path: `/blogs/${blog.id}`,
     images: blog.image,
     keywords: [
       blog.title,
       blog.category,
-      "Orbitto insights",
-      "food ingredient article",
+      "Orbitto International insights",
+      "food ingredient article India",
+      "food ingredient export blog",
+      "food ingredient sourcing guide India",
     ],
     openGraphType: "article",
   });
@@ -52,11 +55,31 @@ const BlogDetails = async ({ params }) => {
   const blogTitle = blog?.title || "Orbitto Article";
   const blogPath = `/blogs/${blog?.id || params?.id}`;
 
+  const blogPosting = getBlogPostingSchema(blog);
+  const blogPostingWithSpeakable = blog
+    ? {
+        ...blogPosting,
+        speakable: {
+          "@type": "SpeakableSpecification",
+          cssSelector: [".blog-details-desc p", ".blog-details-desc h2", ".blog-details-desc h3"],
+        },
+      }
+    : blogPosting;
+
   return (
     <>
       <StructuredData
         id="blog-detail-schema"
-        data={getBlogPostingSchema(blog)}
+        data={blogPostingWithSpeakable}
+      />
+      <StructuredData
+        id="blog-detail-webpage-schema"
+        data={getWebPageSchema({
+          title: blogTitle,
+          description: truncateText(blog?.excerpt || stripHtml(blog?.blog_description || ""), 160),
+          path: blogPath,
+          type: "Article",
+        })}
       />
       <StructuredData
         id="blog-detail-breadcrumb-schema"
