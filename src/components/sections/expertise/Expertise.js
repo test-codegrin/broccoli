@@ -1,23 +1,23 @@
 const expertiseItems = [
   {
     icon: "fas fa-stopwatch",
-    title: "Timely Service",
-    desc: "Structured order planning and coordinated execution for dependable timelines.",
+    title: "Timely Supply",
+    desc: "Structured order planning and coordinated execution for dependable delivery timelines across international markets.",
   },
   {
     icon: "fas fa-award",
     title: "Consistent Quality",
-    desc: "Quality-focused sourcing, handling, and supply processes across every shipment.",
+    desc: "Export-grade sourcing, processing, and supply of fruit powders, vegetable powders, spices, honey, and herbal ingredients.",
   },
   {
     icon: "fas fa-globe-asia",
     title: "Global Reach",
-    desc: "Export-ready product support for buyers, brands, and distributors worldwide.",
+    desc: "Export-ready ingredient supply for importers, distributors, food brands, and private label buyers worldwide.",
   },
   {
     icon: "fas fa-shield-alt",
-    title: "Goods Safety",
-    desc: "Careful packaging, documentation, and product protection for safer delivery.",
+    title: "Safe Export Handling",
+    desc: "Careful packaging, product protection, and export documentation for secure and compliant international ingredient delivery.",
   },
 ];
 
@@ -27,10 +27,11 @@ const Expertise = () => {
       <div className="home-expertise__container">
         <div className="home-expertise__heading">
           <span>Our Expertise</span>
-          <h2>Reliable Export Support From Planning to Delivery</h2>
+          <h2>Reliable Food Ingredient Export From India   Planning to Delivery</h2>
           <p>
-            To provide efficient services to clients, we believe each order must
-            be strategically planned and stringently implemented.
+            Orbitto International provides export-focused food ingredient supply for
+            global buyers, ensuring each order is strategically planned and precisely
+            executed from our Gujarat, India facility.
           </p>
         </div>
 

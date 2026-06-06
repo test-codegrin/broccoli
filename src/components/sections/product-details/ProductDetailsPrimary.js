@@ -245,7 +245,7 @@ const ProductDetailsPrimary = ({ initialProductIdOrSlug }) => {
   }, [selectedProduct, syncCurrentProduct]);
 
   // ---------------------------------------------------------------------------
-  // GALLERY SLIDERS — fully imperative so React never touches the children.
+  // GALLERY SLIDERS   fully imperative so React never touches the children.
   //
   // Jerk fix: instead of a hard empty() → rebuild (which collapses the layout),
   // we fade the containers out, rebuild while invisible, then fade back in.
@@ -562,7 +562,7 @@ const ProductDetailsPrimary = ({ initialProductIdOrSlug }) => {
                 <div className="row">
                   <div className={isNotSidebar ? "col-lg-6" : "col-md-6"}>
                     <div className="ltn__Product-details-img-gallery">
-                      {/* Left empty by React — slides are injected imperatively */}
+                      {/* Left empty by React   slides are injected imperatively */}
                       <div
                         ref={largeSliderRef}
                         className="ltn__Product-details-large-img"
@@ -576,7 +576,7 @@ const ProductDetailsPrimary = ({ initialProductIdOrSlug }) => {
 
                   <div className={isNotSidebar ? "col-lg-6" : "col-md-6"}>
                     {/*
-                      No `key` here — removing it lets React diff ProductDetailsRight
+                      No `key` here   removing it lets React diff ProductDetailsRight
                       in-place instead of unmounting + remounting on every product
                       switch, which was the main cause of the right-panel jerk.
                       ProductDetailsRight should derive all display state from its

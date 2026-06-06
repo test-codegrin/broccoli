@@ -113,7 +113,7 @@ const Products3 = ({ title, desc, isSmallTitle, pt, type }) => {
     const clamped = clampOffset(newOffset);
 
     if (currentOffset <= maxOffset) {
-      // Already at the end — switch category (offset resets via useEffect)
+      // Already at the end   switch category (offset resets via useEffect)
       switchCategory("next");
       return 0;
     }

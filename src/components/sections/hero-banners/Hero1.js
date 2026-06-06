@@ -775,7 +775,7 @@ const HERO_SLIDES = SLIDES.map((slide) => ({
 // ─────────────────────────────────────────────────────────────────────────────
 function getFluidOverride(item, viewportW) {
   if (!item.fluid) return null;
-  // Sorted ascending — find the smallest bp that is >= viewportW
+  // Sorted ascending   find the smallest bp that is >= viewportW
   const breakpoints = [480, 576, 768, 1024, 1100, 1150, 1280, 1366, 1440];
   const candidates = breakpoints.filter((b) => viewportW <= b);
   const bp = candidates.find((b) => item.fluid[b]);
@@ -929,14 +929,14 @@ const CSS = `
   }
 
   /* ════════════════════════════════════════════════════════════════════════════
-     FLUID LAYOUT — now covers ≤ 1440px (was ≤ 1100px)
+     FLUID LAYOUT   now covers ≤ 1440px (was ≤ 1100px)
      Desktop stage only fires for > 1440px (true large desktops).
 
      ARCHITECTURE:
        .hs-fluid-stage      full-width positioning context
          [floats]           absolute, spread across full viewport width via vw
          .hs-fluid-main     3-col grid, absolute inset:0, z-index 4
-           .hs-fluid-center bowl, z-index 5 — always above floats
+           .hs-fluid-center bowl, z-index 5   always above floats
        .hs-fluid-tabs       below stage, normal flow
   ════════════════════════════════════════════════════════════════════════════ */
 
@@ -1020,8 +1020,8 @@ const CSS = `
   }
 
   /*
-   * Floats — absolute, relative to .hs-fluid-stage (full viewport width).
-   * vw-based sizes spread proportionally. z-index 3 — below bowl (5), above watermark (0).
+   * Floats   absolute, relative to .hs-fluid-stage (full viewport width).
+   * vw-based sizes spread proportionally. z-index 3   below bowl (5), above watermark (0).
    */
   .hs-fluid-float {
     position: absolute;
@@ -1477,7 +1477,7 @@ export default function Hero1() {
       const w = window.innerWidth;
       const h = window.innerHeight;
       setViewportW(w);
-      // Desktop stage only activates above 1440px — fluid handles everything ≤ 1440px
+      // Desktop stage only activates above 1440px   fluid handles everything ≤ 1440px
       if (w > 1440) {
         const ws = w / BASE_STAGE_WIDTH;
         const hs = (h - 80) / BASE_STAGE_HEIGHT;
@@ -1599,7 +1599,7 @@ export default function Hero1() {
         />
 
         {/* ══════════════════════════════════════════════
-            DESKTOP — scaled-stage layout (> 1440px only)
+            DESKTOP   scaled-stage layout (> 1440px only)
         ════════════════════════════════════════════════ */}
         <div className="hs-stage-outer" style={{ height: stageHeight }}>
           <div
@@ -1716,7 +1716,7 @@ export default function Hero1() {
         </div>
 
         {/* ══════════════════════════════════════════════
-            FLUID — ≤ 1440px (tablet, laptop, small desktop)
+            FLUID   ≤ 1440px (tablet, laptop, small desktop)
 
             Float positions are vw-based, spreading elements to
             screen edges at each breakpoint. The bowl stays centered
@@ -1739,7 +1739,7 @@ export default function Hero1() {
               {slide.bgText}
             </div>
 
-            {/* ── Floats — spread across full stage width ── */}
+            {/* ── Floats   spread across full stage width ── */}
             {fluidFloats.map((item, i) => {
               const sz = item._w;
               if (sz === "0px" || sz === 0 || sz === "0") return null;
@@ -1771,7 +1771,7 @@ export default function Hero1() {
               );
             })}
 
-            {/* Content grid — above floats */}
+            {/* Content grid   above floats */}
             <div className="hs-fluid-main">
               {/* LEFT */}
               <div className="hs-fluid-left">
@@ -1800,7 +1800,7 @@ export default function Hero1() {
                 </div>
               </div>
 
-              {/* CENTER — bowl only; floats escape this container */}
+              {/* CENTER   bowl only; floats escape this container */}
               <div className="hs-fluid-center">
                 <div className="hs-fluid-bowl-wrap">
                   {cupAnimating && prevCup !== null && (

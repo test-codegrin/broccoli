@@ -9,24 +9,26 @@ const About = () => {
         <div className="home-about__content">
           <h2>About our Products</h2>
           <p>
-            At Orbitto, we manufacture high-quality food powders including fruit
-            powder, vegetable powder, dairy ingredients, herbal blends, and
-            premium spice mixes. Using advanced low-temperature spray drying and
-            dehydration technology, we ensure maximum retention of natural
-            flavor, color, and nutritional value.
+            Orbitto International is an export-focused food ingredient manufacturer
+            based in Morbi, Gujarat, India. We manufacture high-quality food powders
+            including fruit powder, vegetable powder, herbal blends, and premium spice
+            mixes for global buyers, importers, food brands, and distributors. Using
+            advanced low-temperature spray drying and dehydration technology, we ensure
+            maximum retention of natural flavor, color, and nutritional value.
           </p>
           <p>
-            We source fresh ingredients from trusted farms and process every
-            batch with precision to deliver consistent quality and performance.
-            Our dehydrated powders and spice blends are ideal for food
-            manufacturing, culinary applications, and health products.
+            We source fresh ingredients from trusted farms across India and process
+            every batch with precision to deliver consistent quality for bulk ingredient
+            supply. Our dehydrated powders and spice blends are ideal for food
+            manufacturing, beverage production, nutraceutical applications, and
+            private label product development for international markets.
           </p>
           <p>
-            With a strong focus on purity and innovation, Orbitto products are
-            free from unnecessary additives and made to meet the highest quality
-            standards. Whether you need reliable ingredients or authentic taste,
-            Orbitto delivers natural, clean, and high-performance food
-            solutions.
+            With a strong focus on purity and export-readiness, Orbitto International
+            products meet the quality expectations of global buyers. We support private
+            label manufacturing, contract manufacturing, and third-party manufacturing
+            arrangements for food brands seeking a reliable food ingredient supplier
+            from India.
           </p>
           <Link
             href="/products"
@@ -39,7 +41,7 @@ const About = () => {
         <div className="home-about__image-wrap">
           <Image
             src="/img/hero/about.webp"
-            alt="Orbitto premium fruit powder"
+            alt="Orbitto International food ingredient manufacturing facility in Morbi, Gujarat, India"
             width={760}
             height={520}
             className="home-about__image"

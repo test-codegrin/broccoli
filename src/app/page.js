@@ -3,19 +3,42 @@ import StructuredData from "@/components/seo/StructuredData";
 import PageWrapper from "@/components/shared/wrappers/PageWrapper";
 import {
   buildSeoMetadata,
-  defaultDescription,
+  getBreadcrumbSchema,
+  getFAQPageSchema,
+  getItemListSchema,
   getWebPageSchema,
 } from "@/libs/seo";
+import { homeFaqItems } from "@/libs/seoContent";
+
+const homeDescription =
+  "Orbitto International exports fruit powders, vegetable powders, spices, honey, and herbal ingredients from Gujarat, India. Bulk supply, private label, export documentation, and MOQ support for global buyers, importers, food brands, and distributors.";
 
 export const metadata = buildSeoMetadata({
-  title: "Fruit Powder, Spices, Honey & Ingredient Exporter",
-  description: defaultDescription,
+  title:
+    "Food Ingredient Exporter India | Fruit Powder, Spices, Honey & Herbal Ingredients",
+  description: homeDescription,
   path: "/",
   keywords: [
-    "fruit powder manufacturer",
-    "vegetable powder supplier",
-    "honey exporter",
-    "spice ingredient supplier",
+    "food ingredient exporter India",
+    "food ingredient supplier India",
+    "fruit powder exporter India",
+    "vegetable powder exporter India",
+    "spice exporter Gujarat India",
+    "honey exporter India",
+    "herbal powder supplier India",
+    "bulk food ingredient supplier",
+    "private label food manufacturing India",
+    "contract food manufacturing Gujarat",
+    "third party food manufacturer India",
+    "food ingredient manufacturer Morbi Gujarat",
+    "natural ingredient supplier India",
+    "export food ingredients India",
+    "food powder manufacturer India",
+    "ingredient supplier for importers distributors",
+    "food ingredient exporter for food brands",
+    "spray dried fruit powder exporter",
+    "dehydrated vegetable powder exporter India",
+    "wholesale food ingredient supplier India",
   ],
 });
 
@@ -23,12 +46,44 @@ export default function Home() {
   return (
     <>
       <StructuredData
-        id="home-page-schema"
+        id="home-webpage-schema"
         data={getWebPageSchema({
-          title: "Orbitto International Home",
-          description: defaultDescription,
+          title:
+            "Food Ingredient Exporter India   Orbitto International",
+          description: homeDescription,
           path: "/",
         })}
+      />
+      <StructuredData
+        id="home-breadcrumb-schema"
+        data={getBreadcrumbSchema([{ name: "Home", path: "/" }])}
+      />
+      <StructuredData
+        id="home-product-categories-schema"
+        data={getItemListSchema({
+          title: "Orbitto International   Export Food Ingredient Categories",
+          path: "/products",
+          items: [
+            {
+              name: "Fruit Powder",
+              path: "/products/category/fruit-powder",
+            },
+            {
+              name: "Vegetable Powder",
+              path: "/products/category/vegetable-powder",
+            },
+            { name: "Pure Honey", path: "/products/category/honey" },
+            { name: "Spices", path: "/products/category/spices" },
+            {
+              name: "Herbal Powder",
+              path: "/products/category/herbal-powder",
+            },
+          ],
+        })}
+      />
+      <StructuredData
+        id="home-faq-schema"
+        data={getFAQPageSchema(homeFaqItems)}
       />
       <PageWrapper isNavbarAppointmentBtn={true}>
         <IndexMain />

@@ -2,17 +2,52 @@ export const homeFaqItems = [
   {
     question: "What does Orbitto International export?",
     answer:
-      "Orbitto International exports fruit powders, vegetable powders, spices, honey, herbal powders, and related food ingredient solutions for international buyers, distributors, and brands.",
+      "Orbitto International exports fruit powders, vegetable powders, spices, honey, herbal powders, and related food ingredient solutions for international buyers, importers, distributors, and food brands worldwide.",
   },
   {
-    question: "Does Orbitto International support private label and contract manufacturing?",
+    question: "Is Orbitto International a food ingredient exporter from India?",
     answer:
-      "Yes. Orbitto International can discuss private label requirements, contract manufacturing scope, packaging preferences, and export-oriented supply needs depending on the product category and order plan.",
+      "Yes. Orbitto International is a food ingredient exporter and manufacturer based in Morbi, Gujarat, India, supplying fruit powders, vegetable powders, spices, honey, and herbal ingredients to global buyers and food brands.",
   },
   {
-    question: "Can global buyers request MOQ, pricing, specifications, or samples?",
+    question: "Can Orbitto supply fruit powder and vegetable powder in bulk?",
     answer:
-      "Yes. Buyers can contact Orbitto International for MOQ guidance, commercial discussions, specifications, application support, and sample-related enquiries.",
+      "Yes. Orbitto International supports bulk ingredient supply of fruit powders, vegetable powders, herbal powders, and spices for food manufacturers, importers, distributors, and private label brands requiring large-volume sourcing.",
+  },
+  {
+    question: "Does Orbitto International support private label packaging?",
+    answer:
+      "Yes. Orbitto International can discuss private label requirements, custom packaging preferences, branded formulations, and contract manufacturing scope depending on the product category and buyer order plan.",
+  },
+  {
+    question: "Can international buyers request samples, MOQ, and pricing?",
+    answer:
+      "Yes. International buyers, importers, and food brands can contact Orbitto International to discuss MOQ guidance, commercial pricing, product specifications, application support, and sample-related enquiries.",
+  },
+  {
+    question: "What product categories does Orbitto International supply?",
+    answer:
+      "Orbitto International supplies five main export ingredient categories: fruit powder, vegetable powder, pure honey, spices, and herbal powder. These are available for bulk supply, private label, and third-party manufacturing arrangements.",
+  },
+  {
+    question: "Does Orbitto International support export documentation and logistics?",
+    answer:
+      "Yes. Orbitto International positions its supply service around export-ready coordination, including product documentation, packaging for international shipment, and logistics support aligned to buyer requirements and destination markets.",
+  },
+  {
+    question: "Which industries use Orbitto International ingredients?",
+    answer:
+      "Orbitto International ingredients are used in beverages, bakery, confectionery, dairy, ready meals, health foods, nutraceuticals, functional foods, food service, and wellness-focused product development across global markets.",
+  },
+  {
+    question: "Can Orbitto supply spices, honey, and herbal powders for export?",
+    answer:
+      "Yes. Orbitto International exports premium spices, pure honey, and herbal powders alongside fruit and vegetable powders. All categories are available for export-focused bulk supply, private label arrangements, and commercial buyer discussions.",
+  },
+  {
+    question: "How can buyers request MOQ, pricing, and product specifications from Orbitto?",
+    answer:
+      "Buyers can submit an enquiry via the Orbitto International contact page with their product interest, service type, and requirements. The team responds with MOQ details, pricing guidance, specifications, and next steps for commercial discussions.",
   },
 ];
 

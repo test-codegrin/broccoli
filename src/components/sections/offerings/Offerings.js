@@ -4,22 +4,22 @@ const offerings = [
   {
     icon: "fas fa-building",
     title: "Contract Manufacturing",
-    desc: "End-to-end production support for global brands",
+    desc: "End-to-end food ingredient production support for global food brands and importers seeking reliable manufacturing from India.",
   },
   {
     icon: "fas fa-hands-helping",
     title: "Private Label Solutions",
-    desc: "Launch your own brand with customized formulations & packaging",
+    desc: "Launch your own food ingredient brand with customized formulations, private label packaging, and export-ready supply from Gujarat, India.",
   },
   {
     icon: "fas fa-ship",
     title: "Bulk Ingredient Supply",
-    desc: "High-quality natural food ingredients for industrial use",
+    desc: "High-quality natural food ingredients   fruit powders, vegetable powders, spices, honey, and herbal powders   for industrial and wholesale buyers.",
   },
   {
     icon: "fas fa-industry",
     title: "Third-Party Manufacturing",
-    desc: "Scalable, cost-effective production capabilities",
+    desc: "Scalable, cost-effective third-party food manufacturing for distributors, food brands, and nutraceutical companies sourcing from India.",
   },
 ];
 
@@ -29,7 +29,7 @@ const Offerings = () => {
       <div className="home-offerings__container">
         <div className="home-offerings__heading">
           <h2>Our Offerings</h2>
-          <p>Comprehensive Manufacturing Solutions</p>
+          <p>Comprehensive Food Ingredient Manufacturing Solutions for Global Buyers</p>
         </div>
 
         <div className="home-offerings__grid">
