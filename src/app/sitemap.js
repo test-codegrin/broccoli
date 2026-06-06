@@ -13,31 +13,37 @@ const staticRoutes = [
     path: "/",
     changeFrequency: "weekly",
     priority: 1,
+    lastModified: new Date("2025-06-01"),
   },
   {
     path: "/about",
     changeFrequency: "monthly",
     priority: 0.8,
+    lastModified: new Date("2025-05-01"),
   },
   {
     path: "/products",
     changeFrequency: "daily",
     priority: 0.9,
+    lastModified: new Date("2025-06-01"),
   },
   {
     path: "/blogs",
     changeFrequency: "weekly",
     priority: 0.7,
+    lastModified: new Date("2025-06-01"),
   },
   {
     path: "/application",
     changeFrequency: "monthly",
     priority: 0.7,
+    lastModified: new Date("2025-05-01"),
   },
   {
     path: "/contact",
     changeFrequency: "monthly",
     priority: 0.8,
+    lastModified: new Date("2025-05-01"),
   },
 ];
 
@@ -55,7 +61,7 @@ export default async function sitemap() {
 
   const staticEntries = staticRoutes.map((route) => ({
     url: `${siteUrl}${route.path}`,
-    lastModified: new Date(),
+    lastModified: route.lastModified,
     changeFrequency: route.changeFrequency,
     priority: route.priority,
   }));

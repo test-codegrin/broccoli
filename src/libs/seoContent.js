@@ -55,17 +55,32 @@ export const aboutFaqItems = [
   {
     question: "What kind of company is Orbitto International?",
     answer:
-      "Orbitto International is an export-focused ingredient manufacturer and supplier serving global food, beverage, wellness, and private label requirements.",
+      "Orbitto International is an export-focused food ingredient manufacturer and supplier based in Morbi, Gujarat, India, serving global importers, food brands, distributors, private label companies, and industrial buyers with fruit powders, vegetable powders, spices, honey, and herbal ingredients.",
+  },
+  {
+    question: "Where is Orbitto International located?",
+    answer:
+      "Orbitto International is located in Morbi, Gujarat, India. The company operates a marketing head office in Morbi and a manufacturing unit in Wankaner, Morbi, Gujarat, supplying food ingredients for international export.",
   },
   {
     question: "What makes Orbitto International relevant for international buyers?",
     answer:
-      "Orbitto International combines product handling, packaging support, documentation coordination, and buyer-focused service for commercial export supply relationships.",
+      "Orbitto International combines Gujarat-sourced ingredient quality, export documentation support, flexible packaging options, and buyer-focused service for importers, distributors, and food brands seeking reliable long-term ingredient supply from India.",
+  },
+  {
+    question: "Does Orbitto International support private label and contract manufacturing?",
+    answer:
+      "Yes. Orbitto International provides private label manufacturing, contract manufacturing, and third-party manufacturing services for food brands, distributors, and nutraceutical companies looking to source custom-formulated food ingredients from India.",
   },
   {
     question: "Which markets can Orbitto International support?",
     answer:
-      "Orbitto International is positioned to support importers, distributors, brands, and industrial buyers seeking consistent ingredient supply for international markets.",
+      "Orbitto International supports importers, distributors, food brands, and industrial buyers worldwide. The company exports food ingredients globally with full export documentation, packaging, and logistics coordination from its Gujarat, India base.",
+  },
+  {
+    question: "What manufacturing technology does Orbitto International use?",
+    answer:
+      "Orbitto International uses advanced low-temperature spray drying and dehydration technology to produce fruit powders, vegetable powders, and herbal powders, ensuring maximum retention of natural flavor, color, and nutritional value for export-grade quality.",
   },
 ];
 
@@ -89,19 +104,34 @@ export const contactFaqItems = [
 
 export const applicationFaqItems = [
   {
-    question: "Which industries use Orbitto International products?",
+    question: "Which industries use Orbitto International food ingredients?",
     answer:
-      "Orbitto International ingredients are relevant for beverages, bakery, confectionery, dairy, ready meals, health foods, nutraceuticals, and wellness-focused product development.",
+      "Orbitto International ingredients are used across beverages, bakery, confectionery, dairy, ready meals, health foods, nutraceuticals, functional foods, food service, snacks, seasonings, and wellness product development by food manufacturers and brands globally.",
+  },
+  {
+    question: "How is fruit powder used in food and beverage manufacturing?",
+    answer:
+      "Fruit powders from Orbitto International are used in instant beverages, smoothie powders, bakery fillings, confectionery coatings, dairy flavours, nutraceutical blends, and private label health supplements. They provide concentrated natural flavour and colour without preservatives.",
+  },
+  {
+    question: "What are the applications of vegetable powder in food manufacturing?",
+    answer:
+      "Vegetable powders from Orbitto International are used in soup mixes, seasoning blends, ready meal formulations, baby food, health bars, functional snacks, and food service products. They offer consistent colour, flavour, and nutritional value for industrial use.",
   },
   {
     question: "Can Orbitto ingredients be used in private label and industrial formulations?",
     answer:
-      "Yes. Orbitto International products are positioned for bulk ingredient sourcing, industrial formulations, and private label product development.",
+      "Yes. Orbitto International ingredients are suitable for bulk sourcing, industrial formulations, and private label product development across food, beverage, nutraceutical, and wellness categories for brands and distributors worldwide.",
   },
   {
-    question: "Can buyers request application guidance for specific categories?",
+    question: "Are Orbitto herbal and spice ingredients suitable for nutraceuticals and wellness products?",
     answer:
-      "Yes. Buyers can contact Orbitto International to discuss application suitability, product details, and category-specific commercial requirements.",
+      "Yes. Orbitto International herbal powders and spices are used in nutraceutical capsules, wellness supplements, functional beverage blends, ayurvedic formulations, and health-focused private label products by brands across global markets.",
+  },
+  {
+    question: "Can buyers request application guidance for specific product categories?",
+    answer:
+      "Yes. Buyers can contact Orbitto International to discuss ingredient suitability for specific applications, request product specifications, and explore formulation-level commercial requirements for their product category.",
   },
 ];
 

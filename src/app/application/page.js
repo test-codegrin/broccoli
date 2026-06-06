@@ -5,21 +5,29 @@ import {
   buildSeoMetadata,
   getBreadcrumbSchema,
   getCollectionPageSchema,
+  getFAQPageSchema,
 } from "@/libs/seo";
 import { applicationFaqItems } from "@/libs/seoContent";
 import React from "react";
 
+const applicationDescription =
+  "Explore how Orbitto International fruit powders, vegetable powders, spices, honey, and herbal ingredients are used in beverages, bakery, nutraceuticals, ready meals, functional foods, and wellness product manufacturing worldwide.";
+
 export const metadata = buildSeoMetadata({
-  title: "Product Applications",
-  description:
-    "Explore fruit powder, vegetable powder, honey, spice, and herbal powder applications for beverages, bakery, snacks, ready meals, nutraceuticals, and wellness products.",
+  title: "Food Ingredient Applications — Beverages, Bakery, Nutraceuticals & More",
+  description: applicationDescription,
   path: "/application",
   keywords: [
-    "fruit powder applications",
+    "fruit powder applications food manufacturing",
     "vegetable powder applications",
-    "honey applications",
-    "spice applications",
-    "herbal powder applications",
+    "herbal powder nutraceutical applications",
+    "food ingredient applications India",
+    "honey applications food brands",
+    "spice applications food manufacturing",
+    "food ingredient supplier for beverage brands",
+    "food powder supplier for nutraceuticals",
+    "ingredient supplier for private label wellness",
+    "food ingredient for ready meals",
   ],
 });
 
@@ -29,11 +37,14 @@ const Application = () => {
       <StructuredData
         id="applications-page-schema"
         data={getCollectionPageSchema({
-          title: "Orbitto Product Applications",
-          description:
-            "Application ideas for fruit powders, vegetable powders, spices, honey, and herbal ingredients across global food and beverage categories.",
+          title: "Food Ingredient Applications — Orbitto International",
+          description: applicationDescription,
           path: "/application",
         })}
+      />
+      <StructuredData
+        id="application-faq-schema"
+        data={getFAQPageSchema(applicationFaqItems)}
       />
       <StructuredData
         id="application-breadcrumb-schema"

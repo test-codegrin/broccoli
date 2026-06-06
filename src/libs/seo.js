@@ -262,6 +262,7 @@ export const getWebPageSchema = ({
   description,
   path = "/",
   type = "WebPage",
+  speakableSelectors = null,
 }) => ({
   "@context": "https://schema.org",
   "@type": type,
@@ -274,6 +275,14 @@ export const getWebPageSchema = ({
   about: {
     "@id": `${absoluteUrl("/")}#organization`,
   },
+  ...(speakableSelectors?.length
+    ? {
+        speakable: {
+          "@type": "SpeakableSpecification",
+          cssSelector: speakableSelectors,
+        },
+      }
+    : {}),
 });
 
 export const getCollectionPageSchema = ({ title, description, path = "/" }) =>
