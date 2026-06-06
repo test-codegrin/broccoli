@@ -26,7 +26,7 @@ const productCategoryContent = {
       "dehydrated fruit powder exporter",
     ],
     entityText:
-      "Orbitto International exports spray-dried and dehydrated fruit powders from Morbi, Gujarat, India for global importers, food brands, and distributors. Available in bulk supply, private label, and contract manufacturing arrangements.",
+      "Orbitto International is a fruit powder exporter and supplier from India, shipping spray-dried and dehydrated fruit powders from Morbi, Gujarat. As a bulk fruit powder supplier in India, Orbitto serves beverage brands, food manufacturers, nutraceutical companies, importers, distributors, and private label buyers worldwide.",
   },
   "vegetable-powder": {
     label: "Vegetable Powder",
@@ -43,7 +43,7 @@ const productCategoryContent = {
       "freeze dried vegetable powder India",
     ],
     entityText:
-      "Orbitto International exports dehydrated and spray-dried vegetable powders from Morbi, Gujarat, India for importers, food manufacturers, and private label brands worldwide.",
+      "Orbitto International is a vegetable powder exporter and supplier from India, producing dehydrated vegetable powders in Gujarat for soups, seasonings, and ready meals. As a bulk vegetable powder supplier in India, Orbitto serves food manufacturers, importers, private label companies, and distributors worldwide.",
   },
   honey: {
     label: "Honey",
@@ -60,7 +60,7 @@ const productCategoryContent = {
       "wholesale honey exporter India",
     ],
     entityText:
-      "Orbitto International exports pure natural honey from Gujarat, India for global food brands, importers, private label companies, and wholesale distributors.",
+      "Orbitto International is a honey exporter and pure honey supplier from India, shipping natural honey from Gujarat for food brands and wholesale distributors. As a bulk honey supplier in India, Orbitto serves importers, private label companies, food manufacturers, and retail packaging companies worldwide.",
   },
   spices: {
     label: "Spices",
@@ -77,7 +77,7 @@ const productCategoryContent = {
       "premium spice exporter India",
     ],
     entityText:
-      "Orbitto International exports premium Indian spices from Gujarat, India for global importers, food manufacturers, seasoning blend producers, and private label brands.",
+      "Orbitto International is a spice exporter from India and Indian spice supplier based in Gujarat. As a wholesale spice exporter from India, Orbitto supplies whole and ground spices to food manufacturers, seasoning blend producers, importers, and private label brands worldwide.",
   },
   "herbal-powder": {
     label: "Herbal Powder",
@@ -94,7 +94,7 @@ const productCategoryContent = {
       "wellness ingredient supplier India",
     ],
     entityText:
-      "Orbitto International exports cold-processed herbal powders from Gujarat, India for nutraceutical brands, wellness companies, and private label ingredient buyers worldwide.",
+      "Orbitto International is a herbal powder exporter and Ayurvedic herbal powder supplier from India, producing wellness ingredients in Gujarat. As a bulk herbal powder supplier in India, Orbitto serves nutraceutical brands, functional beverage manufacturers, wellness companies, and private label ingredient buyers worldwide.",
   },
   fruit: {
     label: "Fruit",

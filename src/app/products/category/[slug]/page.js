@@ -104,6 +104,7 @@ const ProductCategoryPage = async ({ params }) => {
           })),
         })}
       />
+      <h1 className="screen-reader-text">{category.label} Exporter &amp; Supplier from India — Orbitto International</h1>
       <p className="screen-reader-text">{category.entityText}</p>
       <PageWrapper
         isNotHeaderTop={true}
