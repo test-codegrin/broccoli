@@ -357,7 +357,7 @@ const ContactPrimary = () => {
                     type="submit"
                     disabled={!formData.agree}
                   >
-                    get an free service
+                    Submit Export Enquiry
                   </button>
                 </div>
                 {status ? (

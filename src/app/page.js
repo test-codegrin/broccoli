@@ -49,7 +49,7 @@ export default function Home() {
         id="home-webpage-schema"
         data={getWebPageSchema({
           title:
-            "Food Ingredient Exporter India — Orbitto International",
+            "Food Ingredient Exporter India    Orbitto International",
           description: homeDescription,
           path: "/",
           speakableSelectors: [

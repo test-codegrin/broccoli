@@ -14,7 +14,7 @@ const applicationDescription =
   "Explore how Orbitto International fruit powders, vegetable powders, spices, honey, and herbal ingredients are used in beverages, bakery, nutraceuticals, ready meals, functional foods, and wellness product manufacturing worldwide.";
 
 export const metadata = buildSeoMetadata({
-  title: "Food Ingredient Applications — Beverages, Bakery, Nutraceuticals & More",
+  title: "Food Ingredient Applications    Beverages, Bakery, Nutraceuticals & More",
   description: applicationDescription,
   path: "/application",
   keywords: [
@@ -37,7 +37,7 @@ const Application = () => {
       <StructuredData
         id="applications-page-schema"
         data={getCollectionPageSchema({
-          title: "Food Ingredient Applications — Orbitto International",
+          title: "Food Ingredient Applications    Orbitto International",
           description: applicationDescription,
           path: "/application",
         })}

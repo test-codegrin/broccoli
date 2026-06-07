@@ -3,6 +3,7 @@ import StructuredData from "@/components/seo/StructuredData";
 import PageWrapper from "@/components/shared/wrappers/PageWrapper";
 import {
   buildSeoMetadata,
+  getBlogSchema,
   getBreadcrumbSchema,
   getCollectionPageSchema,
   getItemListSchema,
@@ -19,7 +20,7 @@ export async function generateMetadata({ searchParams }) {
     Boolean(searchParams?.author_role);
 
   return buildSeoMetadata({
-    title: "Food Ingredient Insights — Export, Applications & Sourcing Blog",
+    title: "Food Ingredient Insights    Export, Applications & Sourcing Blog",
     description:
       "Read Orbitto International articles on food ingredient trends, export-ready powders, sourcing insights, application guides, and product innovation for importers, food brands, and global buyers.",
     path: "/blogs",
@@ -65,17 +66,33 @@ const Blogs = async ({ searchParams }) => {
         ])}
       />
       {!hasFilters ? (
-        <StructuredData
-          id="blogs-item-list-schema"
-          data={getItemListSchema({
-            title: "Orbitto Blog Articles",
-            path: "/blogs",
-            items: (blogList || []).map((blog) => ({
-              name: blog.title,
-              path: `/blogs/${blog.id}`,
-            })),
-          })}
-        />
+        <>
+          <StructuredData
+            id="blogs-item-list-schema"
+            data={getItemListSchema({
+              title: "Orbitto Blog Articles",
+              path: "/blogs",
+              items: (blogList || []).map((blog) => ({
+                name: blog.title,
+                path: `/blogs/${blog.id}`,
+              })),
+            })}
+          />
+          <StructuredData
+            id="blogs-blog-schema"
+            data={getBlogSchema({
+              title: "Orbitto Insights Blog",
+              description:
+                "Articles and updates from Orbitto International on ingredient applications, export planning, and food product trends.",
+              path: "/blogs",
+              posts: (blogList || []).map((blog) => ({
+                title: blog.title,
+                path: `/blogs/${blog.id}`,
+                datePublished: blog.created_at,
+              })),
+            })}
+          />
+        </>
       ) : null}
       <PageWrapper
         isNotHeaderTop={true}
@@ -83,7 +100,7 @@ const Blogs = async ({ searchParams }) => {
         isTextWhite={true}
         isNavbarAppointmentBtn={true}
       >
-        <BlogsMain />
+        <BlogsMain initialBlogs={hasFilters ? [] : blogList} />
       </PageWrapper>
     </>
   );

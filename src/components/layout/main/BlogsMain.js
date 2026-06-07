@@ -3,7 +3,7 @@ import BlogsPrimary from "@/components/sections/blogs/BlogsPrimary";
 import Features4 from "@/components/sections/features/Features4";
 import HeroPrimary from "@/components/sections/hero-banners/HeroPrimary";
 
-const BlogsMain = ({ title }) => {
+const BlogsMain = ({ title, initialBlogs }) => {
   return (
     <main>
       <HeroPrimary
@@ -11,7 +11,7 @@ const BlogsMain = ({ title }) => {
         text="Insights"
         isCapitalize={false}
       />
-      <BlogsPrimary />
+      <BlogsPrimary initialBlogs={initialBlogs} />
       <Features4 />
     </main>
   );

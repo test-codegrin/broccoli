@@ -37,7 +37,9 @@ const ProductsPrimary = ({ isSidebar }) => {
   const limit = isSidebar === false ? 16 : 21;
   const pageJumpRef = useRef(null);
   const [isPageJumpOpen, setIsPageJumpOpen] = useState(false);
-  const [areVisibleImagesReady, setAreVisibleImagesReady] = useState(false);
+  const [areVisibleImagesReady, setAreVisibleImagesReady] = useState(
+    !isProductsLoading && Boolean(filteredProducts?.length)
+  );
   const shouldShowPowderNote = powderNoteCategories.has(
     normalizeProductType(category)
   );

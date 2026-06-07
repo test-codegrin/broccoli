@@ -1,4 +1,5 @@
 import ProductMain from "@/components/layout/main/ShopMain";
+import CategoryContent from "@/components/seo/CategoryContent";
 import StructuredData from "@/components/seo/StructuredData";
 import PageWrapper from "@/components/shared/wrappers/PageWrapper";
 import {
@@ -48,7 +49,7 @@ export async function generateMetadata({ params }) {
   const category = getCategoryContent(params?.slug);
 
   return buildSeoMetadata({
-    title: `${category.label} Exporter & Supplier from India — Orbitto International`,
+    title: `${category.label} Exporter & Supplier from India    Orbitto International`,
     description: category.description,
     path: buildProductCategoryPath(category.slug),
     keywords: [
@@ -76,7 +77,7 @@ const ProductCategoryPage = async ({ params }) => {
       <StructuredData
         id="product-category-page-schema"
         data={getCollectionPageSchema({
-          title: `${category.label} Exporter & Supplier — Orbitto International`,
+          title: `${category.label} Exporter & Supplier    Orbitto International`,
           description: category.description,
           path: categoryPath,
         })}
@@ -96,7 +97,7 @@ const ProductCategoryPage = async ({ params }) => {
       <StructuredData
         id="product-category-item-list-schema"
         data={getItemListSchema({
-          title: `${category.label} Products — Orbitto International`,
+          title: `${category.label} Products    Orbitto International`,
           path: categoryPath,
           items: (productList || []).map((product) => ({
             name: product.title || product.name,
@@ -104,7 +105,6 @@ const ProductCategoryPage = async ({ params }) => {
           })),
         })}
       />
-      <h1 className="screen-reader-text">{category.label} Exporter &amp; Supplier from India — Orbitto International</h1>
       <p className="screen-reader-text">{category.entityText}</p>
       <PageWrapper
         isNotHeaderTop={true}
@@ -116,6 +116,9 @@ const ProductCategoryPage = async ({ params }) => {
           <ProductMain
             isSidebar="primary"
             categoryOverride={category.slug}
+            title={`${category.label} Exporter & Supplier from India`}
+            text={category.label}
+            extraContent={<CategoryContent category={category} />}
             faqSection={{
               id: "product-category-faq",
               title: `${category.label} Export FAQ`,

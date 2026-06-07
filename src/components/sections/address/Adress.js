@@ -32,7 +32,7 @@ const Adress = () => {
                   <Link href="tel:+919904727348">+91 99047 27348</Link>
                 </span>
                 <span>
-                  <strong>Marketing Manager &amp; Management Manager</strong>
+                  <strong>Export Enquiry Contact</strong>
                   <br />
                   <Link href="tel:+919726687849">+91 97266 87849</Link>
                 </span>

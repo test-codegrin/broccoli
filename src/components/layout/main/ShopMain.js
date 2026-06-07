@@ -19,6 +19,9 @@ const ProductMain = ({
   text,
   categoryOverride,
   faqSection,
+  initialProducts,
+  initialPagination,
+  extraContent,
 }) => {
   const productLimit = isSidebar === false ? 16 : 21;
   const searchParams = useSearchParams();
@@ -44,6 +47,8 @@ const ProductMain = ({
     search,
     page: productPage,
     limit: productLimit,
+    initialProducts,
+    initialPagination,
   });
   const {
     categories: productCategories,
@@ -106,7 +111,9 @@ const ProductMain = ({
     <main>
       <HeroPrimary
         title={
-          category
+          categoryOverride && title
+            ? title
+            : category
             ? `${makeText(category)} Export Products`
             : brand
             ? `Brand: ${makeText(brand)}`
@@ -163,6 +170,7 @@ const ProductMain = ({
       >
         <ProductsPrimary isSidebar={isSidebar} />
       </CommonContext>
+      {extraContent || null}
       {faqSection?.items?.length ? (
         <SeoFaqSection
           id={faqSection.id}

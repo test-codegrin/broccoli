@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const buildProductsUrl = ({ category, search, page, limit } = {}) => {
   const params = new URLSearchParams();
@@ -13,17 +13,30 @@ const buildProductsUrl = ({ category, search, page, limit } = {}) => {
 };
 
 const useProducts = (filters = {}) => {
-  const { category, search, page = 1, limit = 100 } = filters;
-  const [products, setProducts] = useState([]);
-  const [pagination, setPagination] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const {
+    category,
+    search,
+    page = 1,
+    limit = 100,
+    initialProducts,
+    initialPagination,
+  } = filters;
+  const [products, setProducts] = useState(initialProducts || []);
+  const [pagination, setPagination] = useState(initialPagination || null);
+  const [isLoading, setIsLoading] = useState(!initialProducts?.length);
   const [error, setError] = useState(null);
+  const hasSeedData = useRef(Boolean(initialProducts?.length));
 
   useEffect(() => {
     const controller = new AbortController();
 
     const loadProducts = async () => {
-      setIsLoading(true);
+      const isFirstLoadWithSeed = hasSeedData.current;
+      hasSeedData.current = false;
+
+      if (!isFirstLoadWithSeed) {
+        setIsLoading(true);
+      }
       setError(null);
 
       try {

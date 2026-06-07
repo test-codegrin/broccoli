@@ -12,7 +12,7 @@ import { contactFaqItems } from "@/libs/seoContent";
 import React from "react";
 
 export const metadata = buildSeoMetadata({
-  title: "Contact Orbitto International — Request MOQ, Pricing, Samples & Export Enquiry",
+  title: "Contact Orbitto International    Request MOQ, Pricing, Samples & Export Enquiry",
   description:
     "Contact Orbitto International for export enquiries, bulk ingredient supply, private label manufacturing, product MOQ, pricing, packaging, samples, and documentation support from Gujarat, India.",
   path: "/contact",
@@ -59,7 +59,7 @@ const Contact = () => {
       <StructuredData
         id="contact-page-schema"
         data={getContactPageSchema({
-          title: "Contact Orbitto International — Export Enquiry & Buyer Support",
+          title: "Contact Orbitto International    Export Enquiry & Buyer Support",
           description:
             "Reach Orbitto International for export quotes, bulk supply, MOQ, private label, samples, and product discussions from Gujarat, India.",
         })}

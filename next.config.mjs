@@ -59,7 +59,7 @@ const nextConfig = {
         ],
       },
       {
-        // llms.txt and robots.txt — cache briefly so AI crawlers pick up updates quickly
+        // llms.txt and robots.txt    cache briefly so AI crawlers pick up updates quickly
         source: "/(llms.txt|robots.txt|sitemap.xml)",
         headers: [
           {

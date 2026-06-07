@@ -38,7 +38,7 @@ export async function generateMetadata({ params }) {
   );
 
   return buildSeoMetadata({
-    title: `${productTitle} — Exporter & Bulk Supplier from India`,
+    title: `${productTitle}    Exporter & Bulk Supplier from India`,
     description,
     path: product.path || `/products/${product.id || product.slug || productIdOrSlug}`,
     images: product.images?.length ? product.images : product.image,

@@ -388,6 +388,16 @@ export const getProductSchema = (product) => {
       "@type": "BusinessAudience",
       audienceType: "Importers, distributors, and food brands",
     },
+    offers: {
+      "@type": "Offer",
+      url: absoluteUrl(product.path || `/products/${product.id || product.slug}`),
+      availability: "https://schema.org/InStock",
+      businessFunction: "http://purl.org/goodrelations/v1#Sell",
+      seller: {
+        "@id": `${absoluteUrl("/")}#organization`,
+      },
+      eligibleCustomerType: "https://schema.org/Reseller",
+    },
   };
 };
 
@@ -417,6 +427,28 @@ export const getBlogPostingSchema = (blog) => {
     },
   };
 };
+
+export const getBlogSchema = ({ title, description, path = "/blogs", posts = [] }) => ({
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  name: title,
+  description,
+  url: absoluteUrl(path),
+  isPartOf: {
+    "@id": `${absoluteUrl("/")}#website`,
+  },
+  publisher: {
+    "@id": `${absoluteUrl("/")}#organization`,
+  },
+  blogPost: posts
+    .filter((post) => post?.title && post?.path)
+    .map((post) => ({
+      "@type": "BlogPosting",
+      headline: post.title,
+      url: absoluteUrl(post.path),
+      ...(post.datePublished ? { datePublished: post.datePublished } : {}),
+    })),
+});
 
 export const getLocalBusinessSchema = () => ({
   "@context": "https://schema.org",

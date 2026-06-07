@@ -69,7 +69,7 @@ const getProductsSeo = (searchParams = {}) => {
   }
 
   return {
-    title: "Food Ingredient Products — Fruit Powder, Vegetable Powder, Spices, Honey & Herbal",
+    title: "Food Ingredient Products    Fruit Powder, Vegetable Powder, Spices, Honey & Herbal",
     description:
       "Browse Orbitto International's full export ingredient catalog: fruit powders, vegetable powders, spices, honey, and herbal powders from Gujarat, India for bulk supply, private label, and global food manufacturing.",
     canonicalPath: "/products",
@@ -133,9 +133,9 @@ export async function generateMetadata({ searchParams }) {
 
 const Products = async ({ searchParams }) => {
   const seo = getProductsSeo(searchParams);
-  const { data: productList } = seo.noIndex
-    ? { data: [] }
-    : await getPublicProducts({ page: 1, limit: 12 });
+  const { data: productList, pagination: productPagination } = seo.noIndex
+    ? { data: [], pagination: null }
+    : await getPublicProducts({ page: 1, limit: 21 });
 
   return (
     <>
@@ -184,6 +184,8 @@ const Products = async ({ searchParams }) => {
             isSidebar="primary"
             title="Export Product Catalog"
             text="Products"
+            initialProducts={productList}
+            initialPagination={productPagination}
             faqSection={{
               id: "products-faq",
               title: "Products FAQ",

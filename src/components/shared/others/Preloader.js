@@ -129,7 +129,7 @@ const Preloader = () => {
               ref={brandRef}
               className="preloader-logo-img"
               src="/img/logo.webp"
-              alt="Loading"
+              alt="Orbitto International"
               width={254}
               height={254}
               priority

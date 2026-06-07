@@ -14,7 +14,7 @@ const aboutDescription =
   "Orbitto International is a food ingredient exporter and manufacturer based in Morbi, Gujarat, India. Learn about our spray drying and dehydration process, export capabilities, private label manufacturing, and bulk ingredient supply for global buyers.";
 
 export const metadata = buildSeoMetadata({
-  title: "About Orbitto International — Food Ingredient Exporter from Gujarat, India",
+  title: "About Orbitto International    Food Ingredient Exporter from Gujarat, India",
   description: aboutDescription,
   path: "/about",
   keywords: [
@@ -36,7 +36,7 @@ const About = () => {
       <StructuredData
         id="about-page-schema"
         data={getWebPageSchema({
-          title: "About Orbitto International — Food Ingredient Exporter from Gujarat, India",
+          title: "About Orbitto International    Food Ingredient Exporter from Gujarat, India",
           description: aboutDescription,
           path: "/about",
           type: "AboutPage",

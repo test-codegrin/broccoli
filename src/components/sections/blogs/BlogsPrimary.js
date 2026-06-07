@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -71,16 +71,22 @@ const BlogCard = ({ blog }) => {
   );
 };
 
-const BlogsPrimary = () => {
+const BlogsPrimary = ({ initialBlogs }) => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [activeCategory, setActiveCategory] = useState("all");
-  const [blogs, setBlogs] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [blogs, setBlogs] = useState(initialBlogs || []);
+  const [isLoading, setIsLoading] = useState(!initialBlogs?.length);
+  const hasSeedData = useRef(Boolean(initialBlogs?.length));
 
   useEffect(() => {
     const loadBlogs = async () => {
-      setIsLoading(true);
+      const isFirstLoadWithSeed = hasSeedData.current;
+      hasSeedData.current = false;
+
+      if (!isFirstLoadWithSeed) {
+        setIsLoading(true);
+      }
       const response = await fetch("/api/blog", { cache: "no-store" });
       const result = await response.json().catch(() => ({}));
       setBlogs(result.data || []);
