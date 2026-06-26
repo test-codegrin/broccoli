@@ -17081,6 +17081,23 @@ blockquote::before {
   margin-bottom: 0;
 }
 
+.footer-compliance {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 18px;
+}
+
+.footer-fssai-logo {
+  flex: 0 0 auto;
+  line-height: 0;
+}
+
+.footer-fssai-logo img {
+  width: 53px;
+  height: auto;
+}
+
 .footer-attribution {
   margin: 16px 0 0;
   font-size: 13px;
@@ -17163,6 +17180,13 @@ blockquote::before {
     justify-content: center;
   }
   .ltn__copyright-area .ltn__copyright-menu {
+    text-align: center !important;
+  }
+  .footer-compliance {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 15px;
     text-align: center !important;
   }
   .footer-attribution {

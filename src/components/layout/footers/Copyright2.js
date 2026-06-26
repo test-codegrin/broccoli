@@ -1,6 +1,9 @@
 import { useFooterContex } from "@/providers/FooterContext";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+
+const fssaiLogo = "/img/FSSAI_logo.png";
 
 const Copyright2 = () => {
   const { footerBg } = useFooterContex();
@@ -20,18 +23,28 @@ const Copyright2 = () => {
             </div>
           </div>
           <div className="col-md-6 col-12 align-self-center">
-            <div className="ltn__copyright-menu text-end">
-              <ul>
-                <li>
-                  <Link href="#">Terms & Conditions</Link>
-                </li>{" "}
-                <li>
-                  <Link href="#">Claim</Link>
-                </li>{" "}
-                <li>
-                  <Link href="#">Privacy & Policy</Link>
-                </li>
-              </ul>
+            <div className="footer-compliance text-end">
+              <div className="footer-fssai-logo">
+                <Image
+                  src={fssaiLogo}
+                  alt="FSSAI"
+                  width={92}
+                  height={56}
+                />
+              </div>
+              <div className="ltn__copyright-menu">
+                <ul>
+                  <li>
+                    <Link href="#">Terms & Conditions</Link>
+                  </li>{" "}
+                  <li>
+                    <Link href="#">Claim</Link>
+                  </li>{" "}
+                  <li>
+                    <Link href="#">Privacy & Policy</Link>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
