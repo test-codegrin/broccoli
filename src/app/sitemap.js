@@ -8,6 +8,12 @@ import { getSiteUrl } from "@/libs/seo";
 import { slugify } from "@/libs/supabase/queries/products";
 import { supabaseAdmin } from "@/libs/supabase/admin";
 
+function toValidDate(value) {
+  if (!value) return new Date();
+  const d = new Date(value);
+  return isNaN(d.getTime()) ? new Date() : d;
+}
+
 const staticRoutes = [
   {
     path: "/",
@@ -68,7 +74,7 @@ export default async function sitemap() {
 
   const productEntries = (productsResult.data || []).map((product) => ({
     url: `${siteUrl}/products/${slugify(product.product_name) || product.products_id}`,
-    lastModified: product.updated_at || product.created_at || new Date(),
+    lastModified: toValidDate(product.updated_at || product.created_at),
     changeFrequency: "weekly",
     priority: 0.8,
   }));
@@ -89,7 +95,7 @@ export default async function sitemap() {
 
   const blogEntries = (blogsResult.data || []).map((blog) => ({
     url: `${siteUrl}/blogs/${blog.blog_detail_id}`,
-    lastModified: blog.updated_at || blog.created_at || new Date(),
+    lastModified: toValidDate(blog.updated_at || blog.created_at),
     changeFrequency: "monthly",
     priority: 0.7,
   }));
